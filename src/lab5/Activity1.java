@@ -15,7 +15,7 @@ public class Activity1 {
         String ic = JOptionPane.showInputDialog(null,"Enter 12-digit IC number : ");
         if (ic==null)return;
         ic = ic.trim();
-        if (!ic.matches("\\d(12)")){
+        if (!ic.matches("\\d{12}")){
             
             JOptionPane.showMessageDialog(null,"Error : IC must contain exactly 12 digits.");
             return;
@@ -44,7 +44,7 @@ public class Activity1 {
             }
             int age = Period.between(birthday,today).getYears();
             String dateText = String.format("%02d-%02d-%04d",day,month,year);
-            JOptionPane.showMessageDialog(null,"Birth Date : "+dateText+"\nAge : "+age+"years");
+            JOptionPane.showMessageDialog(null,"Birth Date : "+dateText+"\n Age : "+age+" years");
         }
         
         catch (DateTimeException ex){
